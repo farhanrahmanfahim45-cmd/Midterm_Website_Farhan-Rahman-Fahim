@@ -5,61 +5,46 @@
 
 const memoryStore = {};
 
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function setCookie(name, value) {
+  document.cookie = name + "=" + encodeURIComponent(value) + ";path=/;max-age=" + (60 * 60 * 24 * 7);
+}
+
 function storageGet(key) {
   try {
-    return localStorage.getItem(key);
+    const value = localStorage.getItem(key);
+    if (value !== null) return value;
   } catch (e) {
-    return memoryStore[key] || null;
+    // localStorage unavailable, fall through to cookie/memory
   }
+
+  const cookieValue = getCookie(key);
+  if (cookieValue !== null) return cookieValue;
+
+  return memoryStore[key] !== undefined ? memoryStore[key] : null;
 }
 
 function storageSet(key, value) {
   try {
     localStorage.setItem(key, value);
   } catch (e) {
-    memoryStore[key] = value;
+    // ignore, we still persist via cookie/memory below
   }
+
+
+  setCookie(key, value);
+  memoryStore[key] = value;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   updateCartDisplay();
   updateLoginDisplay();
 });
-
-
-// LOGIN BUTTON (used in header on all pages)
-
-function toggleLogin() {
-  const isLoggedIn = storageGet("novasound_loggedIn") === "true";
-
-  if (!isLoggedIn) {
-    const username = prompt("Enter your name to log in:");
-    if (username && username.trim() !== "") {
-      storageSet("novasound_loggedIn", "true");
-      storageSet("novasound_username", username.trim());
-      alert("Welcome, " + username.trim() + "! You are now logged in.");
-    }
-  } else {
-    storageSet("novasound_loggedIn", "false");
-    alert("You have been logged out.");
-  }
-
-  updateLoginDisplay();
-}
-
-function updateLoginDisplay() {
-  const loginBtn = document.getElementById("loginBtn");
-  if (!loginBtn) return;
-
-  const isLoggedIn = storageGet("novasound_loggedIn") === "true";
-  const username = storageGet("novasound_username");
-
-  if (isLoggedIn && username) {
-    loginBtn.textContent = "Logout (" + username + ")";
-  } else {
-    loginBtn.textContent = "Login";
-  }
-}
 
 
 // ADD TO CART BUTTON (used on products page)
