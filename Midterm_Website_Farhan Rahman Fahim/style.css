@@ -1,0 +1,365 @@
+/* =========================================================
+   NovaSound - style.css
+   Farhan Rahman Fahim - ID: 2310843
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f7f8fa;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------------------------
+   HEADER
+--------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff7f50;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#cartCount {
+  font-size: 14px;
+  background-color: #374151;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* ---------------------------
+   NAVIGATION BAR (w3schools base)
+--------------------------- */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: #1f2937;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect required by assignment */
+nav ul li a:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+/* ---------------------------
+   BUTTONS
+--------------------------- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #e56a3d;
+}
+
+.btn-secondary {
+  background-color: #0ea5a4;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #0c8a89;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+/* ---------------------------
+   HERO (HOME PAGE - uses display: flex)
+--------------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1f2937, #374151);
+  color: #ffffff;
+  padding: 60px 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+.hero-img-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-wrapper img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-height: 320px;
+}
+
+/* ---------------------------
+   GENERAL SECTIONS
+--------------------------- */
+section {
+  padding: 50px 40px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: #1f2937;
+  border-left: 5px solid #ff7f50;
+  padding-left: 12px;
+}
+
+section p {
+  margin-bottom: 14px;
+  max-width: 900px;
+  color: #444;
+}
+
+/* ---------------------------
+   FEATURES (uses flex for a card row)
+--------------------------- */
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.feature-card {
+  flex: 1 1 250px;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card img {
+  margin: 0 auto 15px auto;
+  width: 70px;
+  height: 70px;
+}
+
+/* ---------------------------
+   PRODUCTS PAGE (uses display: grid)
+--------------------------- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-info h3 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.price {
+  color: #0ea5a4;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* ---------------------------
+   CONTACT PAGE
+--------------------------- */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1 1 350px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info img {
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #0ea5a4;
+}
+
+/* ---------------------------
+   FOOTER
+--------------------------- */
+footer {
+  background-color: #1f2937;
+  color: #d1d5db;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* ---------------------------
+   RESPONSIVE
+--------------------------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
