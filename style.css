@@ -1,0 +1,373 @@
+/* =========================================================
+   NovaSound - style.css
+   Farhan Rahman Fahim - ID: 2310843
+   ========================================================= */
+
+:root {
+  --purple-dark: #1a0b2e;
+  --purple-mid: #4c1d95;
+  --purple-light: #6d28d9;
+  --blue-deep: #1e1b4b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------------------------
+   HEADER
+--------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, var(--purple-dark), var(--blue-deep));
+  color: #ffffff;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#cartCount {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* ---------------------------
+   NAVIGATION BAR (w3schools base)
+--------------------------- */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: 1px solid #e7e7e7;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--purple-dark);
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect required by assignment */
+nav ul li a:hover {
+  background-color: var(--purple-light);
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  background: linear-gradient(135deg, var(--purple-mid), var(--blue-deep));
+  color: #ffffff;
+}
+
+/* ---------------------------
+   BUTTONS
+--------------------------- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple-light), var(--purple-mid));
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--purple-mid), var(--purple-dark));
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--blue-deep), var(--purple-mid));
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, var(--purple-dark), var(--blue-deep));
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: var(--purple-dark);
+}
+
+/* ---------------------------
+   HERO (HOME PAGE - uses display: flex)
+--------------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-mid) 50%, var(--blue-deep) 100%);
+  color: #ffffff;
+  padding: 60px 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  color: #d9d3e8;
+}
+
+.hero-img-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-wrapper img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-height: 320px;
+}
+
+/* ---------------------------
+   GENERAL SECTIONS
+--------------------------- */
+section {
+  padding: 50px 40px;
+  background-color: #ffffff;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: var(--purple-dark);
+  border-left: 5px solid var(--purple-light);
+  padding-left: 12px;
+}
+
+section p {
+  margin-bottom: 14px;
+  max-width: 900px;
+  color: #444;
+}
+
+/* ---------------------------
+   FEATURES (uses flex for a card row)
+--------------------------- */
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.feature-card {
+  flex: 1 1 250px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(76, 29, 149, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card img {
+  margin: 0 auto 15px auto;
+  width: 70px;
+  height: 70px;
+}
+
+/* ---------------------------
+   PRODUCTS PAGE (uses display: grid)
+--------------------------- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(76, 29, 149, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(76, 29, 149, 0.22);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-info h3 {
+  margin-bottom: 8px;
+  color: var(--purple-dark);
+}
+
+.price {
+  color: var(--purple-mid);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* ---------------------------
+   CONTACT PAGE
+--------------------------- */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1 1 350px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(76, 29, 149, 0.15);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--purple-dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info img {
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 2px 10px rgba(76, 29, 149, 0.15);
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--purple-mid);
+}
+
+/* ---------------------------
+   FOOTER
+--------------------------- */
+footer {
+  background: linear-gradient(135deg, var(--purple-dark), var(--blue-deep));
+  color: #d9d3e8;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* ---------------------------
+   RESPONSIVE
+--------------------------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaSound | Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Farhan Rahman Fahim - ID: 2310843 -->
+
+  <header>
+    <div class="logo">NovaSound</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <span id="cartCount">Cart: 0</span>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Get in Touch</h2>
+    <p>Have a question about an order, a product, or a warranty claim? Fill out the
+      form below and our support team will get back to you within 24 hours.</p>
+    <p>Ready to check out? Once you've added items to your cart from the Products
+      page, click "Place Order" below to confirm your purchase.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-wrapper">
+
+      <form id="contactForm" class="contact-form">
+        <label for="nameInput">Full Name</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+
+        <label for="emailInput">Email Address</label>
+        <input type="email" id="emailInput" placeholder="Enter your email">
+
+        <label for="messageInput">Message</label>
+        <textarea id="messageInput" rows="5" placeholder="Type your message here"></textarea>
+
+        <button type="button" class="btn-primary" onclick="submitContactForm(event)">Send Message</button>
+        <p id="formStatus"></p>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>Address:</strong> House XX, Road XX, Gulshan, Dhaka, Bangladesh</p>
+        <p><strong>Phone:</strong> +880 1234-567890</p>
+        <p><strong>Business Hours:</strong> Sunday - Thursday, 9:00 AM - 6:00 PM</p>
+        <img src="images/map-location.png" alt="Map location of NovaSound office">
+        <img src="images/office building.jpeg" alt="NovaSound office building">
+
+        <button class="btn-secondary" style="margin-top:20px;" onclick="placeOrder()">Place Order</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NovaSound. All rights reserved.</p>
+    <p>Dhaka, Bangladesh | support@novasound.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

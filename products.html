@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaSound | Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Farhan Rahman Fahim - ID: 2310843 -->
+
+  <header>
+    <div class="logo">NovaSound</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <span id="cartCount">Cart: 0</span>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Our Products</h2>
+    <p>Browse our full lineup of audio gear, from everyday earbuds to immersive
+      home theatre speakers. Every product below is in stock and ready to ship.</p>
+    <p>Click "Add to Cart" on any item to add it to your order, then head to the
+      Contact page to place your final order.</p>
+  </section>
+
+  <!-- PRODUCT GRID - -->
+  <section class="product-list">
+    <div class="products-grid">
+
+      <div class="product-card">
+        <img src="images/Wireless over-ear headphones.png" alt="Wireless over-ear headphones">
+        <div class="product-info">
+          <h3>Nova Pulse Headphones</h3>
+          <p class="price">Tk 4,500</p>
+          <p>Wireless over-ear headphones with 40-hour battery life and active noise cancellation.</p>
+          <button class="btn-secondary" onclick="addToCart('Nova Pulse Headphones', 4500)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-earbuds.png" alt="True wireless earbuds">
+        <div class="product-info">
+          <h3>Nova Buds Air</h3>
+          <p class="price">Tk 2,800</p>
+          <p>True wireless earbuds with a compact charging case and sweat resistance.</p>
+          <button class="btn-secondary" onclick="addToCart('Nova Buds Air', 2800)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-speaker.png" alt="Portable bluetooth speaker">
+        <div class="product-info">
+          <h3>Nova Boom Speaker</h3>
+          <p class="price">Tk 3,600</p>
+          <p>Portable Bluetooth speaker with deep bass and 12 hours of playback.</p>
+          <button class="btn-secondary" onclick="addToCart('Nova Boom Speaker', 3600)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product - soundbar.png" alt="Home theatre soundbar">
+        <div class="product-info">
+          <h3>Nova Home Soundbar</h3>
+          <p class="price">Tk 8,900</p>
+          <p>Slim soundbar that upgrades your TV audio with cinema-style surround sound.</p>
+          <button class="btn-secondary" onclick="addToCart('Nova Home Soundbar', 8900)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-gaming headset.png" alt="Gaming headset with microphone">
+        <div class="product-info">
+          <h3>Nova Strike Gaming Headset</h3>
+          <p class="price">Tk 5,200</p>
+          <p>Gaming headset with a noise-cancelling mic and 7.1 surround sound.</p>
+          <button class="btn-secondary" onclick="addToCart('Nova Strike Gaming Headset', 5200)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-smartwatch.png" alt="Fitness smartwatch">
+        <div class="product-info">
+          <h3>Nova Fit Watch</h3>
+          <p class="price">Tk 3,100</p>
+          <p>Fitness smartwatch with heart-rate tracking and built-in music controls.</p>
+          <button class="btn-secondary" onclick="addToCart('Nova Fit Watch', 3100)">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NovaSound. All rights reserved.</p>
+    <p>Dhaka, Bangladesh | support@novasound.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
